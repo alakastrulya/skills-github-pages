@@ -1,0 +1,122 @@
+body {
+    background-color: #1c0148;
+    display: flex;
+    justify-content: center; /* Центрирует содержимое по горизонтали */
+    align-items: center; /* Центрирует содержимое по вертикали */
+    height: 100vh; /* Занимает весь экран */
+    margin: 0; /* Убирает отступы страницы */
+    flex-direction: column; /* Размещает элементы по вертикали */
+}
+
+#table {
+    margin: 0 auto; /* Центрировать игровое поле */
+}
+
+#table td {
+    width: 150px;
+    height: 150px;
+    border: solid 1px white;
+    text-align: center;
+}
+
+#table td:hover {
+    background-color: #150431;
+}
+
+h1 {
+    padding-top: 50px;
+    /* text-align: center; */
+    margin: 20px 0;
+    margin-left: -100px;
+    font-size: 50px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+button {
+    margin-top: 20px;
+    background-color: white;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1c0148;
+    border: 2px solid #4F5151;
+    border-radius: 15px;
+    width: 200px;
+    height: 50px;
+    margin-left: -120px;
+
+}
+
+.game {
+    display: flex;
+    justify-content: center; /* Центрирует игровое поле и статистику */
+    align-items: flex-start; /* Выровнять элементы по верху */
+    gap: 20px; /* Расстояние между игровым полем и статистикой */
+    margin-top: 10px; /* Отступ сверху */
+}
+
+.stat {
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.stat table {
+    border-collapse: collapse;
+}
+
+.stat table, .stat th, .stat td {
+    border: 1px solid white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Адаптивность для экранов шириной меньше 768px */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 40px; /* Уменьшить заголовок */
+    }
+
+    #table td {
+        width: 100px;
+        height: 100px; /* Уменьшить размер клеток */
+    }
+
+    button {
+        width: 150px;
+        height: 40px;
+        font-size: 16px; /* Уменьшить кнопку */
+    }
+
+    .game {
+        flex-direction: column; /* Поставить элементы друг под другом */
+        align-items: center; /* Центрировать */
+    }
+
+    .stat {
+        margin-top: 20px; /* Расположить ниже игрового поля */
+        margin-right: 0; /* Убрать отступ справа */
+    }
+}
+
+/* Адаптивность для экранов шириной меньше 480px */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 30px; /* Еще меньше заголовок */
+    }
+
+    #table td {
+        width: 75px;
+        height: 75px; /* Еще меньше клетки */
+    }
+
+    button {
+        width: 120px;
+        height: 35px;
+        font-size: 14px; /* Еще меньше кнопка */
+    }
+
+    .stat {
+        font-size: 14px; /* Уменьшить текст */
+    }
+}
